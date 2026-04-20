@@ -68,34 +68,15 @@ jobs:
         steps:
             - name: get the code
               uses: actions/checkout@v6
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 01b0cd1 (added changes to dev)
             - name: Set up Docker Buildx
               uses: docker/setup-buildx-action@v4
             - name: build docker image
               uses: docker/build-push-action@v7
-<<<<<<< HEAD
               with:
                 push: false
                 tags: "shaik2025/springpetclinic:latest"          
-=======
-            - name: compile the code
-              run: mvn compile
-            - name: test the code
-              run: mvn test
-            - name: create the package
-              run: mvn clean package
-            - name: publish the test results
-              uses: EnricoMi/publish-unit-test-result-action@v2
-              with:
-                files: "**/target/surefire-reports/**/*.xml"
-                comment_mode: always
->>>>>>> 2a5ec96 (added files)
-=======
+              run: mvn clean package         
               with:
                 push: false
                 tags: "shaik2025/springpetclinic:latest"
 
->>>>>>> 01b0cd1 (added changes to dev)
